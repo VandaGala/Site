@@ -51,6 +51,26 @@
   left: -30px;
 }
 
+.burgers ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.burg {
+  width: 40px;
+  height: 2px;
+  background-color: #000000;
+}
+
+#burger {
+  display: none;
+}
+
+.burgers {
+  display: none;
+}
+
 .wrapper-one {
   width: 100%;
   background-color: #F0EFEB;
@@ -592,11 +612,70 @@
     width: 375px;
   }
 
+  .header-left-menu ul {
+    display: none;
+  }
+
+  .header {
+    width: 90%;
+    margin: auto;
+    padding: 15px, 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+  .header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+  }
+  .header-left-menu ul {
+    width: 0;
+  }
+  .header-left-menu ul li {
+    list-style-type: none;
+  }
+  .header-left-menu ul li a {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 26.4px;
+    color: #1C1B1B;
+    font-weight: 700;
+  }
+  .header-right {
+    position: relative;
+  }
+  .header-right #inst {
+    position: absolute;
+    top: 12px;
+    left: -30px;
+  }
+
+  .burgers {
+    display: flex;
+  }
+
+  #burger:checked + .header-menu {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    gap: 25px;
+    margin-top: 37px;
+    margin-left: 3px;
+    padding: 0;
+  }
+  #burger:checked + .header-menu li a {
+    font-size: 14px;
+  }
+
   .wrapper-one {
     width: 100%;
   }
   .wrapper-one .one {
-    padding: 0;
+    padding: 70px 0 0 0;
     flex-direction: column;
     text-align: center;
   }
@@ -608,6 +687,8 @@
     width: 80%;
     font-size: 20px;
     line-height: 24px;
+    margin: auto;
+    margin-bottom: 30px;
   }
   .wrapper-one .one-left-btn {
     width: 129px;
@@ -676,7 +757,7 @@
   }
   .wrapper-four .four-right p {
     width: 80%;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 36px;
     margin: auto;
     margin-bottom: 20px;
@@ -700,12 +781,12 @@
   }
   .wrapper-five .five-left h2 {
     font-size: 30px;
-    line-height: 26px;
+    line-height: 36px;
   }
   .wrapper-five .five-left p {
     width: 80%;
     margin: auto;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 36px;
     margin-bottom: 20px;
   }
@@ -730,7 +811,7 @@
   }
   .wrapper-six .six-right p {
     width: 80%;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 36px;
     margin: auto;
     margin-bottom: 20px;
@@ -761,6 +842,9 @@
     gap: 26px;
     flex-direction: column;
   }
+  .seven-blocks-block p {
+    font-size: 22px;
+  }
 
   .eight {
     width: 100%;
@@ -771,7 +855,7 @@
     margin: auto;
     margin-bottom: 30px;
     margin-top: 100px;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 36px;
   }
   .eight-wrapper {

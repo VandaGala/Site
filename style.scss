@@ -64,6 +64,27 @@ $var12: 366;
     }
 }
 
+    
+.burgers ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.burg {
+    width: 40px;
+    height: 2px;
+    background-color: #000000;
+}
+
+#burger {
+    display: none;
+}
+
+.burgers {
+    display: none;
+}
+
 .wrapper-one {
     width: 100%;
     background-color: #F0EFEB;
@@ -538,11 +559,79 @@ $var12: 366;
         width: 375px;
     }
 
+    .header-left-menu ul {
+        display: none;
+    }
+
+    .header {
+        width: 90%;
+        margin: auto;
+        padding: 15px, 0;
+    
+        @include mixin.flex(space-between, center, 50px);
+    
+        &-left {
+            @include mixin.flex(flex-start, center, 0);
+    
+            &-menu {
+                ul {            
+                    // display: none;
+                    width: 0;
+
+
+                    li {
+                        list-style-type: none;   
+                    }
+    
+                    li a {
+                        text-decoration: none;
+                        @include mixin.font(16px, 26.4px, #1C1B1B);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    
+        &-right {
+            position: relative;
+    
+            #inst {
+                position: absolute;
+                top: 12px;
+                left: -30px;
+            }
+        }
+    }
+
+    .burgers {
+        display: flex;
+    }
+
+    #burger:checked + .header-menu{
+        width: 100%;
+        display: flex;
+        position: absolute;
+
+        gap: 25px;
+
+        margin-top: 37px;
+        margin-left: 3px;
+        padding: 0;
+
+
+
+        li a {
+        font-size: 14px;            
+        }
+    }
+
+
+
     .wrapper-one {
         width: 100%;
 
         .one {
-            padding: 0;
+            padding: 70px 0 0 0;
             flex-direction: column;
             text-align: center;
     
@@ -556,7 +645,8 @@ $var12: 366;
                     width: 80%;
                     font-size: 20px;
                     line-height: 24px;
-
+                    margin: auto;
+                    margin-bottom: 30px;
                 }
     
                 &-btn {
@@ -643,7 +733,7 @@ $var12: 366;
     
                 p {
                     width: 80%;
-                    font-size: 30px;
+                    font-size: 22px;
                     line-height: 36px;
                     margin: auto;
                     margin-bottom: 20px;
@@ -672,14 +762,14 @@ $var12: 366;
 
                 h2 {
                     font-size: 30px;
-                    line-height: 26px;
+                    line-height: 36px;
                 }
     
                 p {
 
                     width: 80%;
                     margin: auto;
-                    font-size: 28px;
+                    font-size: 22px;
                     line-height: 36px;
                     margin-bottom: 20px;
                 }
@@ -711,7 +801,7 @@ $var12: 366;
     
                 p {
                     width: 80%;
-                    font-size: 30px;
+                    font-size: 22px;
                     line-height: 36px;
                     margin: auto;
                     margin-bottom: 20px;
@@ -740,6 +830,9 @@ $var12: 366;
                 @include mixin.flex(flex-start, center, 26px);
                 flex-direction: column;   
 
+                p {
+                    font-size: 22px;
+                }
             }
         }
     }
@@ -754,7 +847,7 @@ $var12: 366;
             margin: auto;
             margin-bottom: 30px;
             margin-top: 100px;
-            font-size: 30px;
+            font-size: 26px;
             line-height: 36px;
         }
         
