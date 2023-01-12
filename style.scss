@@ -1,0 +1,532 @@
+@use 'mixin.scss';
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+$var1: 100%;
+$var2: 1440;
+$var3: 1064;
+$var4: 481;
+$var5: 593;
+$var6: 632;
+$var7: 311;
+$var8: 156;
+$var9: 628;
+$var10: 498;
+$var11: 513;
+$var12: 366;
+
+.container {
+    width: 1440px;
+    margin: auto;
+}
+
+.header {
+    width: $var1*$var3/$var2;
+    margin: auto;
+    padding: 15px, 0;
+
+    @include mixin.flex(space-between, center, 379px);
+
+    &-left {
+        @include mixin.flex(flex-start, center, 97px);
+
+        &-menu {
+            ul {            
+                @include mixin.flex(flex-start, center, 28px);
+
+                li {
+                    list-style-type: none;   
+                }
+
+                li a {
+                    text-decoration: none;
+                    @include mixin.font(16px, 26.4px, #1C1B1B);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    &-right {
+        position: relative;
+
+        #inst {
+            position: absolute;
+            top: 12px;
+            left: -30px;
+        }
+    }
+}
+
+.wrapper-one {
+    width: 100%;
+    background-color: #F0EFEB;
+
+    .one {
+        width: 100%;
+        margin: auto; 
+        padding: 9px 60px 24px 188px;
+        
+        @include mixin.flex(space-between, center, 0);
+
+        &-left {
+            h1 {
+                @include mixin.font(60px, 70.31px, #000000);
+                font-weight: 700;
+                margin-bottom: 42px;
+            }
+
+            p {
+                // width: 481px;
+                width: $var1*$var4/$var5;
+                @include mixin.font(24px, 28.13px, #000000);
+                margin-bottom: 26px;
+            }
+
+            &-btn {
+                width: 129px;
+                height: 36px;
+                border-radius: 100px;
+                background-color: #000000;
+                @include mixin.font(17px, 20px, #ffffff);
+            }
+        }
+    }
+}    
+
+.two {
+    margin: auto;
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 40px;
+
+    h1 {
+        @include mixin.font(36px, 72px, #000000);
+        font-weight: 700;
+        margin-bottom: 27px;
+    }
+
+    p {
+        width: $var1*$var6/$var2;
+        margin: auto;
+        @include mixin.font(20px, 23px, #000000);
+        margin-bottom: 47px;
+    }
+}
+
+.three {
+    width: $var1*$var3/$var2;
+    margin: auto;
+    @include mixin.flex(flex-start, center, 52px);
+    flex-direction: column;
+    padding-bottom: 248px;
+
+    h1 {
+        @include mixin.font(36px, 42.19px, #000000);
+        font-weight: 700;
+
+    }
+
+    &-blocks {
+        @include mixin.flex(flex-start, flex-start, 60px);
+
+        &-block {
+            @include mixin.flex(flex-start, center, 0);
+            flex-direction: column;
+            text-align: center;
+
+            img {
+                margin-bottom: 27px;
+            }
+
+            p {
+                @include mixin.font(17px, 19.92px, #000000);
+                font-weight: 700;
+                width: $var1*$var8/$var7;
+                margin-bottom: 17px;
+            }
+
+            span {
+                @include mixin.font(17px, 19.92px, #000000);
+                margin-bottom: 10px;
+            }
+
+            a {
+                @include mixin.font(17px, 20px, #000000);
+                font-weight: 700;
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
+
+.wrapper-four {
+    width: 100%;
+    background-color:  rgba(204, 204, 204, 0.3);
+   
+    .four {
+        width: $var1*$var3/$var2;
+        margin: auto;
+        padding: 76px 0 51px 0;
+        @include mixin.flex(flex-start, center, 50px);
+
+        &-right {
+            h2 {
+                @include mixin.font(36px, 32.19px, #000000);
+                font-weight: 700;
+                margin-bottom: 31px;
+            }
+
+            p {
+                @include mixin.font(36px, 42.19px, #000000);
+                margin-bottom: 40px;
+                width: $var1*$var10/$var9;
+            }
+
+            a {
+                @include mixin.font(17px, 19.92px, #000000);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.wrapper-five {
+    width: 100%;
+    background-color: rgba(204, 204, 204, 0.6);
+   
+    .five {
+        width: $var1*$var3/$var2;
+        margin: auto;
+        padding: 76px 0 51px 0;
+        @include mixin.flex(flex-end, center, 50px);
+
+        &-left {
+            // @include mixin.flex(flex-end, center, 0);
+            // flex-direction: column;
+            text-align: end;
+            // width: $var1*$var10/$var11;
+
+            h2 {
+                @include mixin.font(36px, 32.19px, #000000);
+                font-weight: 700;
+                margin-bottom: 31px;
+            }
+
+            p {
+                @include mixin.font(36px, 42.19px, #000000);
+                margin-bottom: 40px;
+                width: 513px;
+
+            }
+
+            a {
+                @include mixin.font(17px, 19.92px, #000000);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.wrapper-six {
+    width: 100%;
+    background-color:  rgba(204, 204, 204, 0.3);
+   
+    .six {
+        width: $var1*$var3/$var2;
+        margin: auto;
+        padding: 76px 0 51px 0;
+        @include mixin.flex(flex-start, center, 50px);
+
+        &-right {
+            h2 {
+                @include mixin.font(36px, 32.19px, #000000);
+                font-weight: 700;
+                margin-bottom: 31px;
+            }
+
+            p {
+                @include mixin.font(36px, 42.19px, #000000);
+                margin-bottom: 40px;
+                width: $var1*$var10/$var9;
+            }
+
+            a {
+                @include mixin.font(17px, 19.92px, #000000);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.seven {
+    @include mixin.flex(flex-start, center, 69px);
+    flex-direction: column;
+    margin: auto;
+    padding: 190px 0 0 0;
+
+    h1 {
+        @include mixin.font(36px, 42.19px, #000000);
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &-blocks {
+        @include mixin.flex(space-between, flex-start, 100px);
+        flex-wrap: wrap;
+        margin: auto;
+        width: $var1*$var3/$var2;
+
+        &-block {
+            width: 215px;
+            text-align: center;
+            @include mixin.flex(flex-start, center, 26px);
+            flex-direction: column;
+
+            .circle {
+                width: 70px;
+                height: 70px;
+                border-radius: 35px;
+
+                &-one {
+                    background-color: #21F7EC;
+                }
+
+                &-two {
+                    background-color: #33D3BC;
+                }
+
+                &-three {
+                    background-color: #18A5C6;
+                }
+
+                &-four {
+                    background-color: #D38F62;
+                }
+
+                &-five {
+                    background-color: #F94C43;
+                }
+
+                &-six {
+                    background-color: #D399FF;
+                }
+            }
+
+            p {
+                @include mixin.font(30px, 35.16px, #000000);
+                font-weight: 700;
+            }
+        }
+    }
+
+
+}
+
+.eight {
+    width: 100%;
+    margin: auto;
+
+
+    h2 {
+        text-align: center;
+        @include mixin.font(36px, 42.19px, #000000);
+        font-weight: 700;
+        margin-bottom: 290px;
+        margin-top: 163px;
+    }
+    
+    &-wrapper {
+        width: 100%;
+        background-color: #f0f0f0;
+
+        &-blocks {
+            width: $var1*$var3/$var2;
+            // overflow: visible;
+            margin: auto;
+            @include mixin.flex(space-between, flex-start, 0);
+
+
+            &-block {
+                width: 260px;
+                @include mixin.flex(flex-start, center, 0);
+                flex-direction: column;
+                text-align: center;
+                padding: 198px 0 52px 0;
+                position: relative;
+
+                span {
+                    @include mixin.font(22px, 25.78px, #000000);
+                    font-weight: 700;
+                    margin-bottom: 35px;
+                }
+
+                p {
+                    @include mixin.font(20px, 23.44px, #000000);
+                    margin-bottom: 45px;
+                }
+
+                a {
+                    @include mixin.font(18px, 21.09px, #000000);
+                    font-weight: 700;
+                }
+            }
+
+            .block1::before {
+                content: "";
+                width: 288px;
+                height: 351px;
+                background-image: url(../images/Rectangle4.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: -192px;
+                left: -11px;
+            }
+
+
+            .block2::before {
+                content: "";
+                width: 288px;
+                height: 351px;
+                background-image: url(../images/Rectangle5.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: -192px;
+                left: -11px;
+            }
+
+
+            .block3::before {
+                content: "";
+                width: 288px;
+                height: 351px;
+                background-image: url(../images/Rectangle6.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: -192px;
+                left: -11px;
+            }
+        }
+    }
+}
+
+.nine {
+    width: 100%;
+    margin: auto;
+    @include mixin.flex(flex-start, center, 20px);
+    flex-direction: column;
+    padding: 80px 0;
+
+    h1 {
+        @include mixin.font(36px, 42.19px, #000000);
+        font-weight: 700;
+    }
+
+    p {
+        width: $var1*$var10/$var2;
+        @include mixin.font(17px, 19.92px, #000000);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &-form {
+        width: $var1*$var12/$var2;
+        @include mixin.flex(flex-start, center, 20px);
+        flex-direction: column;
+
+        &-post {
+            width: 100%;
+            height: 39px;
+            padding: 10px 0 10px 5px;
+        }
+
+        &-post::placeholder {
+            @include mixin.font(14px, 16.41px, #A0A0A0);            
+        }
+
+        &-names {
+            width: 100%;
+            @include mixin.flex(space-between, flex-start, 0);
+
+            &-name {
+                width: 153px;
+                height: 39px;
+                padding: 10px 0 10px 5px;
+            }
+
+            &-name::placeholder {
+                @include mixin.font(14px, 16.41px, #A0A0A0); 
+            }
+        }
+
+        &-btn {
+            width: 115px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 100px;
+            padding: 10px 0;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: #020202;
+    padding-top: 50px;
+
+    &-top {
+        width: $var1*$var3/$var2;
+        margin: auto;
+        @include mixin.flex(space-between, flex-start, 0);
+        margin-bottom: 30px;
+
+        &-left {
+            @include mixin.flex(flex-start, flex-start, 40px);
+            flex-direction: column;
+
+            &-icons {
+                @include mixin.flex(flex-start, flex-start, 20px);
+            }
+        }
+
+        &-right {
+            @include mixin.flex(flex-start,flex-start, 100px);
+
+            h4 {
+                @include mixin.font(14px, 23.1px, #ffffff);
+                font-weight: 400;
+                text-transform: uppercase;
+               margin-bottom: 30px; 
+            }
+
+            .list {
+                @include mixin.flex(flex-start, flex-start, 10px);
+                flex-direction: column;
+
+                li a {
+                    text-decoration: none;
+                    @include mixin.font(14px, 21px, #ffffff);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        text-align: center;
+        @include mixin.font(14px, 23px, #ffffff);
+        font-weight: 400;
+        padding-bottom: 20px;
+    }
+}

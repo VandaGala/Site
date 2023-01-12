@@ -1,0 +1,13 @@
+@mixin flex($justify, $align, $gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin font($f-size, $line-h, $color) {
+    font-family: 'Roboto';
+    font-size: $f-size;
+    line-height: $line-h;
+    color: $color;
+}
